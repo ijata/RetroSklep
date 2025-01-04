@@ -1,0 +1,95 @@
+﻿@model IEnumerable<ESklep.Models.OrderHeader>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.order_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.order_time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.client_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.value_netto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.value_brutto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.realization_user_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.realization_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.realization_time)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.order_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.order_time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.client_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.value_netto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.value_brutto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.realization_user_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.realization_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.realization_time)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.order_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.order_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.order_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

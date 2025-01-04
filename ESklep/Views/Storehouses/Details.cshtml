@@ -1,0 +1,48 @@
+﻿@model ESklep.Models.Storehouse
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Storehouse</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.product_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.product_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.delivery_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.delivery_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.quantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.meansure_unit)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.meansure_unit)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.storehouse_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,69 @@
+﻿@model ESklep.Models.DeliveryHeader
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>DeliveryHeader</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="delivery_id" />
+            <div class="form-group">
+                <label asp-for="storehouse_id" class="control-label"></label>
+                <input asp-for="storehouse_id" class="form-control" />
+                <span asp-validation-for="storehouse_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="number" class="control-label"></label>
+                <input asp-for="number" class="form-control" />
+                <span asp-validation-for="number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="year" class="control-label"></label>
+                <input asp-for="year" class="form-control" />
+                <span asp-validation-for="year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="delivery_date" class="control-label"></label>
+                <input asp-for="delivery_date" class="form-control" />
+                <span asp-validation-for="delivery_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="delivery_time" class="control-label"></label>
+                <input asp-for="delivery_time" class="form-control" />
+                <span asp-validation-for="delivery_time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="value_netto" class="control-label"></label>
+                <input asp-for="value_netto" class="form-control" />
+                <span asp-validation-for="value_netto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="value_brutto" class="control-label"></label>
+                <input asp-for="value_brutto" class="form-control" />
+                <span asp-validation-for="value_brutto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="status" class="control-label"></label>
+                <input asp-for="status" class="form-control" />
+                <span asp-validation-for="status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

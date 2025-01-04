@@ -1,0 +1,72 @@
+﻿@model ESklep.Models.DeliveryPostion
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DeliveryPostion</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.delivery_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.delivery_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.product_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.product_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.quantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.meansure_unit)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.meansure_unit)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.price_netto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.price_netto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.value_netto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.value_netto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tax_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tax_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.price_brutto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.price_brutto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.value_brutto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.value_brutto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.deliveryposition_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
